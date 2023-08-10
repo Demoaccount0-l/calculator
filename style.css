@@ -76,6 +76,10 @@ div.firstoperand, div.secondoperand{
     font-size: 1.6rem;
 }
 
+div.AC:hover{
+    color:white
+}
+
 @media screen and (max-width:920px) {
     main.container{
         width: 45vw;
