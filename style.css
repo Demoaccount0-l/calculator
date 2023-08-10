@@ -1,15 +1,14 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 body{
-    width: 100vw;
-    height: 100vh;
-    background-color: rgb(173, 170, 170);
+    background-color: rgb(105,106,107);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 main.container{
@@ -18,12 +17,16 @@ main.container{
     flex-direction: column;
     border: 2px solid whitesmoke;
     border-radius: 10px;
+    padding: 5px;
+    width: 26vw;
+    height: 56vh;
+    flex-wrap: wrap;
+    box-shadow: 0px 3px 14px 7px #F5F5F5;
     
 }
 
 div.outputDisplay{
-    width: 20vw;
-    height: 20vh;
+    min-height: 12vh;
     color: white;
     font-size: 14px;
     display: flex;
@@ -31,14 +34,13 @@ div.outputDisplay{
     justify-content: flex-end;
     align-items: flex-end;
     margin-bottom: 10px;
-    /*background-color: brown;*/
+    flex: 2 1 auto;
     
 }
 
 div.calcGrid{
-    width: 20vw;
-    height: 20vw;
-    /*background-color: aquamarine;*/
+    
+    flex: 4 1 auto;
     display: grid;
     grid-template-rows: repeat(5,1fr);
     grid-template-columns: repeat(4,1fr);
@@ -52,6 +54,7 @@ button.griditem{
     justify-content: center;
     border-radius: 0.8rem;
     font-size: 1.1rem;
+    padding: 10px 2px;
 }
 
 button.griditem:hover{
@@ -67,4 +70,40 @@ button.equals{
 
 button.operation, button.dot{
     font-size: 1.5rem;
+}
+
+div.firstoperand, div.secondoperand{
+    font-size: 1.6rem;
+}
+
+@media screen and (max-width:920px) {
+    main.container{
+        width: 45vw;
+    }
+    button.griditem{
+        padding: 0;
+        font-size: 1rem;
+    }
+    
+}
+
+@media screen and (max-width:600px){
+    main.container{
+        width: 60vw;
+    }
+        button.griditem{
+            padding: 0;
+            font-size: 1rem;
+        }
+}
+
+@media screen and (max-width:300px) {
+    main.container{
+        width: 100vw;
+    }
+    button.griditem{
+        padding: 0;
+        font-size: 1rem;
+    }
+    
 }
